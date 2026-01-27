@@ -16,6 +16,10 @@
 </head>
 
 <body>
+  <!-- Partículas de fundo tecnológicas -->
+  <canvas id="particles-canvas"></canvas>
+  <div id="custom-cursor"></div>
+  <div id="cursor-dot"></div>
   <header role="banner">
     <div class="container">
       <nav aria-label="Menu principal">
@@ -31,13 +35,19 @@
     </div>
   </header>
   <main role="main">
-    <section id="sobre" tabindex="0" aria-label="Seção Sobre" style="position:relative;">
-      <canvas id="spaceship-canvas" aria-hidden="true"></canvas>
-      <h1>Kelvin Costa Maues </h1>
-      <div class="section-content">
-        <img class="profile-photo" src="images/WhatsApp Image 2025-06-17 at 10.33.38.jpeg"
-          alt="Foto de perfil do Técnico de Informática jovem com fundo azul escuro estilizado" />
-        <p class="intro-text">
+    <section id="sobre" class="reveal-section" tabindex="0" aria-label="Seção Sobre">
+      <div class="hero-section">
+        <div class="profile-container">
+          <img class="profile-photo" src="images/WhatsApp Image 2025-06-17 at 10.33.38.jpeg"
+            alt="Foto de perfil do Técnico de Informática jovem com fundo azul escuro estilizado" />
+          <h1 class="typing-text" data-text="Kelvin Costa Maues">Kelvin Costa Maues</h1>
+          <p class="subtitle typing-text" data-text="Desenvolvedor | Ciências da Computação">Desenvolvedor | Ciências da Computação</p>
+        </div>
+      </div>
+      
+      <div class="section-content reveal-content">
+        <h2>Sobre Mim</h2>
+        <p class="intro-text typing-text" data-typing="true">
 
 
 
@@ -54,13 +64,14 @@
       </div>
     </section>
 
-    <section id="sobre" tabindex="0" aria-label="Seção Sobre" style="position:relative;">
-      <canvas id="spaceship-canvas" aria-hidden="true"></canvas>
-      <h3>Hobbies </h3>
-      <div class="section-content">
-        <img class="profile-photo" src="images/informal.jpeg"
-          alt="Foto de perfil do Técnico de Informática jovem com fundo azul escuro estilizado" />
-        <p class="intro-textHB">
+    <section id="hobbies" class="reveal-section" tabindex="0" aria-label="Seção Hobbies">
+      <div class="section-content reveal-content">
+        <div class="hobby-header">
+          <img class="hobby-photo" src="images/informal.jpeg"
+            alt="Foto informal do desenvolvedor" />
+          <h2 class="typing-text" data-text="Hobbies & Interesses">Hobbies & Interesses</h2>
+        </div>
+        <p class="intro-textHB typing-text" data-typing="true">
 
 
           Estudante de Ciência da Computação e apaixonado por <span
@@ -98,71 +109,64 @@
 
 
 
-    <section id="habilidades" tabindex="0" aria-label="Seção de habilidades">
-      <h2>Minhas Habilidades Tecnológicas</h2>
-      <div class="section-content">
-        <div class="skills-grid" role="list">
-          <article class="skill-card" role="listitem" tabindex="0" aria-label="HTML">
-            <span class="material-icons skill-icon" aria-hidden="true">code</span>
-            <div class="skill-name">HTML</div>
-            <div class="skill-description">Linguagem de marcação usada para estruturar o conteúdo da web e criar páginas
-              estáticas e dinâmicas.</div>
-          </article>
-          <article class="skill-card" role="listitem" tabindex="0" aria-label="CSS">
-            <span class="material-icons skill-icon" aria-hidden="true">style</span>
-            <div class="skill-name">CSS</div>
-            <div class="skill-description">Folhas de estilo em cascata para estilizar páginas web, definindo layouts,
-              cores, fontes e efeitos visuais.</div>
-          </article>
-          <article class="skill-card" role="listitem" tabindex="0" aria-label="JavaScript">
-            <span class="material-icons skill-icon" aria-hidden="true">javascript</span>
-            <div class="skill-name">JavaScript</div>
-            <div class="skill-description">Linguagem de programação que permite criar páginas web interativas, manipular
-              elementos e processar dados.</div>
-          </article>
-          <article class="skill-card" role="listitem" tabindex="0" aria-label="Python">
-            <span class="material-icons skill-icon" aria-hidden="true">memory</span>
-            <div class="skill-name">Python</div>
-            <div class="skill-description">Linguagem de programação versátil, usada para automação, análise de dados,
-              inteligência artificial e desenvolvimento web.</div>
-          </article>
-          <article class="skill-card" role="listitem" tabindex="0" aria-label="Roboflow">
-            <span class="material-icons skill-icon" aria-hidden="true">android</span>
-            <div class="skill-name">Roboflow</div>
-            <div class="skill-description">Plataforma para criação, treinamento e implantação de modelos de visão
-              computacional e machine learning.</div>
-          </article>
-          <article class="skill-card" role="listitem" tabindex="0" aria-label="C++">
-            <span class="material-icons skill-icon" aria-hidden="true">developer_mode</span>
-            <div class="skill-name">C++</div>
-            <div class="skill-description">Linguagem de programação poderosa utilizada para desenvolvimento de sistemas,
-              jogos e aplicativos de alto desempenho.</div>
-          </article>
-          <article class="skill-card" role="listitem" tabindex="0" aria-label="MySQL">
-            <span class="material-icons skill-icon" aria-hidden="true">storage</span>
-            <div class="skill-name">MySQL</div>
-            <div class="skill-description">Sistema de gerenciamento de banco de dados relacional usado para
-              armazenamento e consulta de grandes volumes de dados.</div>
-          </article>
-          <article class="skill-card" role="listitem" tabindex="0" aria-label="Unity">
-            <span class="material-icons skill-icon" aria-hidden="true">sports_esports</span>
-            <div class="skill-name">Unity</div>
-            <div class="skill-description">Motor de jogos e plataforma de desenvolvimento usada para criar jogos 2D, 3D
-              e experiências interativas multimídia.</div>
-          </article>
-          <article class="skill-card" role="listitem" tabindex="0" aria-label="PHP">
-            <span class="material-icons skill-icon" aria-hidden="true">php</span>
-            <div class="skill-name">PHP</div>
-            <div class="skill-description">Linguagem de programação server-side amplamente utilizada para criação de
-              sites dinâmicos e sistemas web.</div>
-          </article>
+    <section id="habilidades" class="reveal-section" tabindex="0" aria-label="Seção de habilidades">
+      <h2 class="typing-text" data-text="Minhas Habilidades Tecnológicas">Minhas Habilidades Tecnológicas</h2>
+      <div class="section-content reveal-content">
+        <div class="wrapper-skills">
+          <div class="inner-skills" style="--quantity: 9;">
+            <div class="card-skill" style="--index: 0;--color-card: 255, 107, 53;" data-skill="html">
+              <span class="material-icons skill-icon-3d">code</span>
+              <div class="skill-name-3d">HTML</div>
+              <div class="skill-description-3d">Linguagem de marcação usada para estruturar o conteúdo da web e criar páginas estáticas e dinâmicas.</div>
+            </div>
+            <div class="card-skill" style="--index: 1;--color-card: 66, 165, 245;" data-skill="css">
+              <span class="material-icons skill-icon-3d">style</span>
+              <div class="skill-name-3d">CSS</div>
+              <div class="skill-description-3d">Folhas de estilo em cascata para estilizar páginas web, definindo layouts, cores, fontes e efeitos visuais.</div>
+            </div>
+            <div class="card-skill" style="--index: 2;--color-card: 255, 235, 59;" data-skill="javascript">
+              <span class="material-icons skill-icon-3d">javascript</span>
+              <div class="skill-name-3d">JavaScript</div>
+              <div class="skill-description-3d">Linguagem de programação que permite criar páginas web interativas, manipular elementos e processar dados.</div>
+            </div>
+            <div class="card-skill" style="--index: 3;--color-card: 76, 175, 80;" data-skill="python">
+              <span class="material-icons skill-icon-3d">memory</span>
+              <div class="skill-name-3d">Python</div>
+              <div class="skill-description-3d">Linguagem de programação versátil, usada para automação, análise de dados, inteligência artificial e desenvolvimento web.</div>
+            </div>
+            <div class="card-skill" style="--index: 4;--color-card: 156, 39, 176;" data-skill="roboflow">
+              <span class="material-icons skill-icon-3d">android</span>
+              <div class="skill-name-3d">Roboflow</div>
+              <div class="skill-description-3d">Plataforma para criação, treinamento e implantação de modelos de visão computacional e machine learning.</div>
+            </div>
+            <div class="card-skill" style="--index: 5;--color-card: 0, 150, 214;" data-skill="cpp">
+              <span class="material-icons skill-icon-3d">developer_mode</span>
+              <div class="skill-name-3d">C++</div>
+              <div class="skill-description-3d">Linguagem de programação poderosa utilizada para desenvolvimento de sistemas, jogos e aplicativos de alto desempenho.</div>
+            </div>
+            <div class="card-skill" style="--index: 6;--color-card: 255, 152, 0;" data-skill="mysql">
+              <span class="material-icons skill-icon-3d">storage</span>
+              <div class="skill-name-3d">MySQL</div>
+              <div class="skill-description-3d">Sistema de gerenciamento de banco de dados relacional usado para armazenamento e consulta de grandes volumes de dados.</div>
+            </div>
+            <div class="card-skill" style="--index: 7;--color-card: 0, 0, 0;" data-skill="unity">
+              <span class="material-icons skill-icon-3d">sports_esports</span>
+              <div class="skill-name-3d">Unity</div>
+              <div class="skill-description-3d">Motor de jogos e plataforma de desenvolvimento usada para criar jogos 2D, 3D e experiências interativas multimídia.</div>
+            </div>
+            <div class="card-skill" style="--index: 8;--color-card: 119, 123, 180;" data-skill="php">
+              <span class="material-icons skill-icon-3d">php</span>
+              <div class="skill-name-3d">PHP</div>
+              <div class="skill-description-3d">Linguagem de programação server-side amplamente utilizada para criação de sites dinâmicos e sistemas web.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="projetos" tabindex="0" aria-label="Seção de projetos">
-      <h2>Meus Projetos</h2>
-      <div class="section-content">
+    <section id="projetos" class="reveal-section" tabindex="0" aria-label="Seção de projetos">
+      <h2 class="typing-text" data-text="Meus Projetos">Meus Projetos</h2>
+      <div class="section-content reveal-content">
         <div class="projects-grid">
           <article class="project-card" tabindex="0">
             <img class="project-image" src="images/object-detection.png"
@@ -208,9 +212,9 @@
       </div>
     </section>
 
-    <section id="contato" tabindex="0" aria-label="Seção contato">
-      <h2>Contato & Redes Sociais</h2>
-      <div class="section-content" style="text-align:center;">
+    <section id="contato" class="reveal-section" tabindex="0" aria-label="Seção contato">
+      <h2 class="typing-text" data-text="Contato & Redes Sociais">Contato & Redes Sociais</h2>
+      <div class="section-content reveal-content" style="text-align:center;">
         <p>
           Estou disponível para novos projetos, colaborações e ideias! Me envie uma mensagem.
         </p>
@@ -250,6 +254,7 @@
     </div>
   </footer>
 
+  <script src="tudo.js"></script>
 </body>
 
 </html>
