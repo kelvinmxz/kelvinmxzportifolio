@@ -1,260 +1,472 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kelvin Costa Maues</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kelvin Costa Maues - Desenvolvedor Full Stack & Estudante de Ciências da Computação especializado em IA e Visão Computacional">
+    <meta name="keywords" content="desenvolvedor, full stack, ciências da computação, inteligência artificial, visão computacional, python, javascript">
+    <meta name="author" content="Kelvin Costa Maues">
+    <title>Kelvin Costa Maues | Desenvolvedor & Estudante de Computação</title>
     
-
-
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Partículas de fundo tecnológicas -->
-  <canvas id="particles-canvas"></canvas>
-  <div id="custom-cursor"></div>
-  <div id="cursor-dot"></div>
-  <header role="banner">
-    <div class="container">
-      <nav aria-label="Menu principal">
-        <div class="logo" tabindex="0"><span style="color: #08b9ff; text-shadow: 0 0 5px #13dcff;">Técnico de
-            Informática</span></div>
-        <div class="nav-links">
-          <a href="#sobre" tabindex="0" class="nav-item active">Sobre</a>
-          <a href="#habilidades" tabindex="0" class="nav-item">Habilidades</a>
-          <a href="#projetos" tabindex="0" class="nav-item">Projetos</a>
-          <a href="#contato" tabindex="0" class="nav-item">Contato</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <main role="main">
-    <section id="sobre" class="reveal-section" tabindex="0" aria-label="Seção Sobre">
-      <div class="hero-section">
-        <div class="profile-container">
-          <img class="profile-photo" src="images/WhatsApp Image 2025-06-17 at 10.33.38.jpeg"
-            alt="Foto de perfil do Técnico de Informática jovem com fundo azul escuro estilizado" />
-          <h1 class="typing-text" data-text="Kelvin Costa Maues">Kelvin Costa Maues</h1>
-          <p class="subtitle typing-text" data-text="Desenvolvedor | Ciências da Computação">Desenvolvedor | Ciências da Computação</p>
-        </div>
-      </div>
-      
-      <div class="section-content reveal-content">
-        <h2>Sobre Mim</h2>
-        <p class="intro-text typing-text" data-typing="true">
-
-
-
-          Atualmente cursando Ciências da Computação, estou focado no desenvolvimento de habilidades em diversas
-          tecnologias para resolver problemas complexos, criar sistemas eficientes e construir soluções digitais
-          inovadoras. Meu objetivo é contribuir com a transformação digital por meio de projetos que agreguem valor,
-          qualidade e eficiência aos processos e serviços.
-
-          Minha paixão pela tecnologia e pela inovação me impulsiona a buscar constantemente novos conhecimentos. Estou
-          sempre estudando e aprendendo novas linguagens de programação, frameworks e ferramentas que me ajudam a
-          ampliar minha expertise e me manter atualizado com as tendências do mercado.
-         
-        </p>
-      </div>
-    </section>
-
-    <section id="hobbies" class="reveal-section" tabindex="0" aria-label="Seção Hobbies">
-      <div class="section-content reveal-content">
-        <div class="hobby-header">
-          <img class="hobby-photo" src="images/informal.jpeg"
-            alt="Foto informal do desenvolvedor" />
-          <h2 class="typing-text" data-text="Hobbies & Interesses">Hobbies & Interesses</h2>
-        </div>
-        <p class="intro-textHB typing-text" data-typing="true">
-
-
-          Estudante de Ciência da Computação e apaixonado por <span
-            style="color: #00ff99; text-shadow: 0 0 5px #00ff99;">Tecnologia</span>. No meu tempo livre, gosto de jogar
-          (sim, jogar um joguinho de vez em quando conta muitos pontos pra mim), ouvir música, além de tocar e cantar
-          também, e praticar algum esporte pra manter a saúde em dia.
-
-          <span style="color: #00ff99; text-shadow: 0 0 5px #00ff99;">programar</span> é algo realmente que gosto muito
-          — não só nas aulas, mas também nos projetos pessoais que faço por conta própria. Já mexi com visão
-          computacional e achei incrível ver como a tecnologia consegue "enxergar" e interagir com o mundo. Isso me fez
-          despertar ainda mais interesse pela área de dados, onde quero trabalhar no futuro.
-
-          Sempre rola um tempo para estudar novas linguagens de programação e aprender sobre tendências como <span
-            style="color: #00ff99; text-shadow: 0 0 5px #00ff99;">IA</span>, machine learning e análise de dados. Enfim,
-          sou um cara curioso, sempre buscando aprender e criar coisas legais com tecnologia!👨🏻‍💻🤩
-
-        </p>
-      </div>
-    </section>
-
-
-    <style>
-      .intro-textHB {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 18px;
-        line-height: 1.6;
-        color: #ffffff;
-        /* ajuste conforme a cor do seu texto */
-        background-color: #1e1e2f;
-        /* fundo escuro pra destacar o estilo “tech” */
-        padding: 20px;
-        border-radius: 8px;
-      }
-    </style>
-
-
-
-    <section id="habilidades" class="reveal-section" tabindex="0" aria-label="Seção de habilidades">
-      <h2 class="typing-text" data-text="Minhas Habilidades Tecnológicas">Minhas Habilidades Tecnológicas</h2>
-      <div class="section-content reveal-content">
-        <div class="wrapper-skills">
-          <div class="inner-skills" style="--quantity: 9;">
-            <div class="card-skill" style="--index: 0;--color-card: 255, 107, 53;" data-skill="html">
-              <span class="material-icons skill-icon-3d">code</span>
-              <div class="skill-name-3d">HTML</div>
-              <div class="skill-description-3d">Linguagem de marcação usada para estruturar o conteúdo da web e criar páginas estáticas e dinâmicas.</div>
-            </div>
-            <div class="card-skill" style="--index: 1;--color-card: 66, 165, 245;" data-skill="css">
-              <span class="material-icons skill-icon-3d">style</span>
-              <div class="skill-name-3d">CSS</div>
-              <div class="skill-description-3d">Folhas de estilo em cascata para estilizar páginas web, definindo layouts, cores, fontes e efeitos visuais.</div>
-            </div>
-            <div class="card-skill" style="--index: 2;--color-card: 255, 235, 59;" data-skill="javascript">
-              <span class="material-icons skill-icon-3d">javascript</span>
-              <div class="skill-name-3d">JavaScript</div>
-              <div class="skill-description-3d">Linguagem de programação que permite criar páginas web interativas, manipular elementos e processar dados.</div>
-            </div>
-            <div class="card-skill" style="--index: 3;--color-card: 76, 175, 80;" data-skill="python">
-              <span class="material-icons skill-icon-3d">memory</span>
-              <div class="skill-name-3d">Python</div>
-              <div class="skill-description-3d">Linguagem de programação versátil, usada para automação, análise de dados, inteligência artificial e desenvolvimento web.</div>
-            </div>
-            <div class="card-skill" style="--index: 4;--color-card: 156, 39, 176;" data-skill="roboflow">
-              <span class="material-icons skill-icon-3d">android</span>
-              <div class="skill-name-3d">Roboflow</div>
-              <div class="skill-description-3d">Plataforma para criação, treinamento e implantação de modelos de visão computacional e machine learning.</div>
-            </div>
-            <div class="card-skill" style="--index: 5;--color-card: 0, 150, 214;" data-skill="cpp">
-              <span class="material-icons skill-icon-3d">developer_mode</span>
-              <div class="skill-name-3d">C++</div>
-              <div class="skill-description-3d">Linguagem de programação poderosa utilizada para desenvolvimento de sistemas, jogos e aplicativos de alto desempenho.</div>
-            </div>
-            <div class="card-skill" style="--index: 6;--color-card: 255, 152, 0;" data-skill="mysql">
-              <span class="material-icons skill-icon-3d">storage</span>
-              <div class="skill-name-3d">MySQL</div>
-              <div class="skill-description-3d">Sistema de gerenciamento de banco de dados relacional usado para armazenamento e consulta de grandes volumes de dados.</div>
-            </div>
-            <div class="card-skill" style="--index: 7;--color-card: 0, 0, 0;" data-skill="unity">
-              <span class="material-icons skill-icon-3d">sports_esports</span>
-              <div class="skill-name-3d">Unity</div>
-              <div class="skill-description-3d">Motor de jogos e plataforma de desenvolvimento usada para criar jogos 2D, 3D e experiências interativas multimídia.</div>
-            </div>
-            <div class="card-skill" style="--index: 8;--color-card: 119, 123, 180;" data-skill="php">
-              <span class="material-icons skill-icon-3d">php</span>
-              <div class="skill-name-3d">PHP</div>
-              <div class="skill-description-3d">Linguagem de programação server-side amplamente utilizada para criação de sites dinâmicos e sistemas web.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projetos" class="reveal-section" tabindex="0" aria-label="Seção de projetos">
-      <h2 class="typing-text" data-text="Meus Projetos">Meus Projetos</h2>
-      <div class="section-content reveal-content">
-        <div class="projects-grid">
-          <article class="project-card" tabindex="0">
-            <img class="project-image" src="images/object-detection.png"
-              alt="Imagem do projeto 1 mostrando código e design" />
-            <h3 class="project-title">Visão computacional - Detector de Objetos</h3>
-            <p class="project-description">Feito com yoloV8. Sistema de detecção de objetos capturados por câmera.</p>
-            <div class="project-links">
-              <a href="https://github.com/kelvinmxz/VisaoComputacional.git" target="_blank" rel="noopener noreferrer"
-                aria-label="Link para o GitHub do projeto gestão de inventário">
-                GitHub
-                <span class="material-icons" aria-hidden="true">open_in_new</span>
-              </a>
-            </div>
-          </article>
-          <article class="project-card" tabindex="0">
-            <img class="project-image" src="images/mapa.png" alt="Imagem do projeto 2 " />
-            <h3 class="project-title">Mapa por Satélite</h3>
-            <p class="project-description">Sistema de um mapa de Manaus que por meio de satélites da starlink mostra os
-              lugares mais poluídos da cidade.</p>
-            <div class="project-links">
-              <a href="https://github.com/kelvinmxz/MapaDeManaus.git" target="_blank" rel="noopener noreferrer"
-                aria-label="Link para o GitHub do projeto de jogo Unity">
-                GitHub
-                <span class="material-icons" aria-hidden="true">open_in_new</span>
-              </a>
-            </div>
-          </article>
-          <article class="project-card" tabindex="0">
-            <img class="project-image" src="images/bioec.jpeg"
-              alt="Imagem do projeto 3 com dashboard feito em JavaScript" />
-            <h3 class="project-title">Blog - Bioeconomia Sustentavel Na Amazônia</h3>
-            <p class="project-description">Site de Informaçoes sobre a Bioeconomia sustentável da Amazônia.</p>
-            <div class="project-links">
-
-              <a href="https://artsfotos.com.br/bioeconomia_sustentavel_na_amazonia/" target="_blank"
-                rel="noopener noreferrer" aria-label="Link para o site do dashboard interativo">
-                Site
-                <span class="material-icons" aria-hidden="true">open_in_new</span>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contato" class="reveal-section" tabindex="0" aria-label="Seção contato">
-      <h2 class="typing-text" data-text="Contato & Redes Sociais">Contato & Redes Sociais</h2>
-      <div class="section-content reveal-content" style="text-align:center;">
-        <p>
-          Estou disponível para novos projetos, colaborações e ideias! Me envie uma mensagem.
-        </p>
-        <p>
-          E-mail: <a href="mailto:seuemail@exemplo.com" target="_blank"
-            rel="noopener noreferrer">kelvincosta4545@gmail.com</a>
-        </p>
-        <ul class="contact-list" role="list" aria-label="Redes sociais">
-          <li role="listitem">
-            <a href="https://github.com/kelvinmxz" target="_blank" rel="noopener noreferrer"
-              aria-label="Link para meu GitHub" title="GitHub">
-              <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="Logotipo do GitHub"
-                class="social-icon" />
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-wrapper">
+            <a href="#home" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">MXZ iTECH</span>
+                <span class="logo-bracket">/&gt;</span>
             </a>
-          </li>
-          <li role="listitem">
-            <a href="https://www.instagram.com/kelvinmxz?igsh=ZHpiNWEzaDVsMWNi&utm_source=qr" target="_blank"
-              rel="noopener noreferrer" aria-label="Link para meu Instagram" title="Instagram">
-              <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Logotipo do Instagram"
-                class="social-icon" />
-            </a>
-          </li>
-          <li role="listitem">
-            <a href="https://www.linkedin.com/in/kelvin-maues-7883a9291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank" rel="noopener noreferrer" aria-label="Link para meu LinkedIn" title="LinkedIn">
-              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Logotipo do LinkedIn"
-                class="social-icon" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  <footer role="contentinfo">
-    <div class="container" aria-label="Informações de copyright">
-      <i>&copy; mxz - Portifólio Kelvin Costa Maués.</i>
-    </div>
-  </footer>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <script src="tudo.js"></script>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="wave">👋</span>
+                        <span>Olá, eu sou</span>
+                    </div>
+                    <h1 class="hero-name">
+                        <span class="first-name">Kelvin</span>
+                        <span class="last-name">Costa Maues</span>
+                    </h1>
+                    <div class="hero-title">
+                        <span class="code-symbol">&gt;_</span>
+                        <span class="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Estudante de <strong>Ciências da Computação</strong> apaixonado por transformar ideias em soluções digitais inovadoras. Especializado em desenvolvimento web, inteligência artificial e visão computacional.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#contato" class="btn btn-primary">
+                            <span>Fale Comigo</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                        <a href="#projetos" class="btn btn-outline">
+                            <span>Ver Projetos</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-social">
+                        <a href="https://github.com/kelvinmxz" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kelvin-maues-7883a9291" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/kelvinmxz" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="image-bg"></div>
+                        <img src="images/WhatsApp Image 2025-06-17 at 10.33.38.jpeg" alt="Kelvin Costa Maues">
+                        <div class="floating-badge badge-1">
+                            <i class="fas fa-code"></i>
+                            <span>Full Stack</span>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fas fa-brain"></i>
+                            <span>AI & ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Conheça mais</span>
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <div class="about-image-border"></div>
+                    <div class="about-image">
+                        <img src="images/informal.jpeg" alt="Kelvin Costa Maues">
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h3 class="about-subtitle">Desenvolvedor & Estudante de Computação</h3>
+                    <p class="about-description">
+                        Atualmente cursando <strong>Ciências da Computação</strong>, estou focado no desenvolvimento de habilidades em diversas tecnologias para resolver problemas complexos, criar sistemas eficientes e construir soluções digitais inovadoras.
+                    </p>
+                    <p class="about-description">
+                        Meu objetivo é contribuir com a transformação digital por meio de projetos que agreguem valor, qualidade e eficiência aos processos e serviços. Minha paixão pela tecnologia e pela inovação me impulsiona a buscar constantemente novos conhecimentos.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-code"></i>
+                            <div class="stat-content">
+                                <h4>Desenvolvimento Web</h4>
+                                <p>HTML, CSS, JavaScript, PHP</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-robot"></i>
+                            <div class="stat-content">
+                                <h4>Machine Learning</h4>
+                                <p>Python, Visão Computacional</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-database"></i>
+                            <div class="stat-content">
+                                <h4>Banco de Dados</h4>
+                                <p>MySQL, Modelagem de Dados</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interests">
+                        <h4><i class="fas fa-heart"></i> Interesses & Hobbies</h4>
+                        <p>
+                            No meu tempo livre, gosto de jogar, ouvir música, tocar e cantar, além de praticar esportes. Tenho grande interesse em <strong>Visão Computacional</strong>, <strong>Inteligência Artificial</strong> e <strong>Análise de Dados</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="habilidades" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Minhas Competências</span>
+                <h2 class="section-title">Habilidades Tecnológicas</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="html">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Estruturação semântica e acessível de páginas web modernas</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="90"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="css">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Design responsivo, animações e layouts modernos</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="85"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="javascript">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Criação de aplicações web interativas e dinâmicas</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="80"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="python">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Automação, análise de dados e inteligência artificial</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="85"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="ai">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Roboflow</h3>
+                    <p>Treinamento de modelos de visão computacional</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="75"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="cpp">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>C++</h3>
+                    <p>Desenvolvimento de sistemas de alto desempenho</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="70"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="mysql">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>MySQL</h3>
+                    <p>Gerenciamento e otimização de bancos de dados</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="80"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="unity">
+                    <div class="skill-icon">
+                        <i class="fab fa-unity"></i>
+                    </div>
+                    <h3>Unity</h3>
+                    <p>Desenvolvimento de jogos e experiências interativas</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="65"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="php">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3>PHP</h3>
+                    <p>Desenvolvimento de aplicações web server-side</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="75"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projetos" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Portfólio</span>
+                <h2 class="section-title">Meus Projetos</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/object-detection.png" alt="Sistema de Visão Computacional">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/kelvinmxz/VisaoComputacional.git" target="_blank" rel="noopener" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>Código</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-eye"></i>
+                            <span>Inteligência Artificial</span>
+                        </div>
+                        <h3 class="project-title">Sistema de Visão Computacional</h3>
+                        <p class="project-description">
+                            Sistema avançado de detecção de objetos em tempo real utilizando YOLOv8, com capacidade de identificar e classificar múltiplos objetos capturados por câmera.
+                        </p>
+                        <div class="project-tags">
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-robot"></i> YOLOv8</span>
+                            <span><i class="fas fa-camera"></i> Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/mapa.png" alt="Mapa Satélite Manaus">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/kelvinmxz/MapaDeManaus.git" target="_blank" rel="noopener" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>Código</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-map"></i>
+                            <span>Geolocalização</span>
+                        </div>
+                        <h3 class="project-title">Mapa por Satélite - Manaus</h3>
+                        <p class="project-description">
+                            Aplicação de mapeamento utilizando dados de satélites Starlink para identificar e monitorar áreas poluídas na cidade de Manaus.
+                        </p>
+                        <div class="project-tags">
+                            <span><i class="fab fa-js"></i> JavaScript</span>
+                            <span><i class="fas fa-satellite"></i> API</span>
+                            <span><i class="fas fa-map-marked-alt"></i> Geolocalização</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/bioec.jpeg" alt="Bioeconomia Sustentável">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://artsfotos.com.br/bioeconomia_sustentavel_na_amazonia/" target="_blank" rel="noopener" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Ver Site</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <i class="fas fa-leaf"></i>
+                            <span>Sustentabilidade</span>
+                        </div>
+                        <h3 class="project-title">Bioeconomia Sustentável</h3>
+                        <p class="project-description">
+                            Blog informativo e educacional sobre práticas de bioeconomia sustentável na região amazônica, promovendo consciência ambiental.
+                        </p>
+                        <div class="project-tags">
+                            <span><i class="fab fa-html5"></i> HTML</span>
+                            <span><i class="fab fa-css3-alt"></i> CSS</span>
+                            <span><i class="fab fa-wordpress"></i> WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Fale Comigo</span>
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Vamos trabalhar juntos!</h3>
+                    <p>Estou disponível para novos projetos, colaborações e oportunidades. Sinta-se à vontade para entrar em contato!</p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:kelvincosta4545@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Email</h4>
+                                <p>kelvincosta4545@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Localização</h4>
+                                <p>Manaus, Amazonas - Brasil</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Situação</h4>
+                                <p>Estudante de Ciências da Computação</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Conecte-se comigo</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/kelvinmxz" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/kelvin-maues-7883a9291" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/kelvinmxz" target="_blank" rel="noopener" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <strong>Kelvin Costa Maues</strong>. Todos os direitos reservados.</p>
+            <p class="footer-subtitle">Desenvolvido com <i class="fas fa-heart"></i> e <i class="fas fa-coffee"></i></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="tudo.js"></script>
 </body>
-
 </html>
