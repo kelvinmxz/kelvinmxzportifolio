@@ -399,7 +399,8 @@ button {
     50% { transform: translate(-50%, -50%) scale(1.1); }
 }
 
-.image-container img {
+.image-container img,
+.image-container video {
     position: relative;
     width: 100%;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
