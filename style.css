@@ -961,6 +961,37 @@ section {
     font-size: 0.95rem;
 }
 
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 40px;
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    border: none;
+}
+
+.whatsapp-button i {
+    font-size: 1.5rem;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+}
+
+.whatsapp-button:active {
+    transform: translateY(-1px);
+}
+
 .contact-social {
     margin-top: 50px;
 }
@@ -1127,6 +1158,13 @@ section {
     
     .contact-methods {
         grid-template-columns: 1fr;
+    }
+    
+    .whatsapp-button {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
+        font-size: 1rem;
     }
     
     .floating-badge {
