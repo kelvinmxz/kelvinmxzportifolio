@@ -12,14 +12,10 @@
     <title>Kelvin Costa Maues | Desenvolvedor & Estudante de Computação</title>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/google-fonts.css">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -98,7 +94,7 @@
                             aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://www.instagram.com/kelvinmxz" target="_blank" rel="noopener"
+                        <a href="https://www.instagram.com/kelvi.nmxz" target="_blank" rel="noopener"
                             aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
@@ -436,6 +432,34 @@ ambientais.
 
             <div class="contact-content">
                 <div class="contact-info">
+                    <div class="whatsapp-contact">
+                        <div class="contact-label">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Meu WhatsApp</span>
+                        </div>
+                        <div class="phone-display">
+                            <span class="phone-number" id="phoneNumber">(92) 98511-6243</span>
+                            <button class="copy-button" id="copyButton" aria-label="Copiar número">
+                                <i class="fas fa-copy"></i>
+                                <span>Copiar</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="email-contact">
+                        <div class="contact-label">
+                            <i class="fas fa-envelope"></i>
+                            <span>Meu Email</span>
+                        </div>
+                        <div class="phone-display">
+                            <span class="phone-number" id="emailAddress">kelvincosta4545@gmail.com</span>
+                            <button class="copy-button" id="copyEmailButton" aria-label="Copiar email">
+                                <i class="fas fa-copy"></i>
+                                <span>Copiar</span>
+                            </button>
+                        </div>
+                    </div>
+
                     <h3>Vamos trabalhar juntos!</h3>
                     <p>Estou disponível para novos projetos, colaborações e oportunidades. Sinta-se à vontade para
                         entrar em contato!</p>
@@ -472,11 +496,6 @@ ambientais.
                         </div>
                     </div>
 
-                    <a href="https://w.app/mxz" target="_blank" rel="noopener" class="whatsapp-button">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>Fale comigo no WhatsApp</span>
-                    </a>
-
                     <div class="contact-social">
                         <h4>Conecte-se comigo</h4>
                         <div class="social-links">
@@ -487,7 +506,7 @@ ambientais.
                                 aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
-                            <a href="https://www.instagram.com/kelvinmxz" target="_blank" rel="noopener"
+                            <a href="https://www.instagram.com/kelvin.mxz" target="_blank" rel="noopener"
                                 aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
@@ -506,9 +525,178 @@ ambientais.
         </div>
     </footer>
 
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="Novo Amor - Carry You (official audio) - Novo Amor (youtube).mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <!-- Music Control Button -->
+    <button id="musicControl" class="music-control" aria-label="Controlar música">
+        <i class="fas fa-music"></i>
+    </button>
+
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/particles.min.js"></script>
     <script src="tudo.js"></script>
+    
+    <!-- Background Music Control Script -->
+    <script>
+        const bgMusic = document.getElementById('backgroundMusic');
+        const musicControl = document.getElementById('musicControl');
+        let isPlaying = false;
+        
+        // Configuração inicial
+        bgMusic.volume = 0.3; // Volume de 30%
+        
+        // Função para tocar música
+        function playMusic() {
+            bgMusic.play()
+                .then(() => {
+                    isPlaying = true;
+                    musicControl.innerHTML = '<i class="fas fa-pause"></i>';
+                    musicControl.classList.remove('paused');
+                })
+                .catch(e => console.log('Erro ao tocar:', e));
+        }
+        
+        // Função para pausar música
+        function pauseMusic() {
+            bgMusic.pause();
+            isPlaying = false;
+            musicControl.innerHTML = '<i class="fas fa-play"></i>';
+            musicControl.classList.add('paused');
+        }
+        
+        // Toggle play/pause no botão
+        musicControl.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isPlaying) {
+                pauseMusic();
+            } else {
+                playMusic();
+            }
+        });
+        
+        // Tenta tocar automaticamente quando a página carregar
+        window.addEventListener('load', () => {
+            playMusic();
+        });
+        
+        // Fallback: tenta tocar na primeira interação se autoplay falhar
+        let hasInteracted = false;
+        const playOnFirstInteraction = () => {
+            if (!hasInteracted && !isPlaying) {
+                hasInteracted = true;
+                playMusic();
+                document.removeEventListener('click', playOnFirstInteraction);
+                document.removeEventListener('keydown', playOnFirstInteraction);
+                document.removeEventListener('touchstart', playOnFirstInteraction);
+            }
+        };
+        
+        setTimeout(() => {
+            if (!isPlaying) {
+                document.addEventListener('click', playOnFirstInteraction);
+                document.addEventListener('keydown', playOnFirstInteraction);
+                document.addEventListener('touchstart', playOnFirstInteraction);
+            }
+        }, 500);
+    </script>
+
+    <!-- Copy Phone Number Script -->
+    <script>
+        const copyButton = document.getElementById('copyButton');
+        const phoneNumber = document.getElementById('phoneNumber');
+        
+        if (copyButton && phoneNumber) {
+            copyButton.addEventListener('click', () => {
+                const phone = phoneNumber.textContent;
+                
+                // Copia para a área de transferência
+                navigator.clipboard.writeText(phone).then(() => {
+                    // Muda o visual do botão para confirmação
+                    const originalHTML = copyButton.innerHTML;
+                    copyButton.innerHTML = '<i class="fas fa-check"></i><span>Copiado!</span>';
+                    copyButton.classList.add('copied');
+                    
+                    // Volta ao normal após 2 segundos
+                    setTimeout(() => {
+                        copyButton.innerHTML = originalHTML;
+                        copyButton.classList.remove('copied');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Erro ao copiar:', err);
+                    // Fallback para navegadores mais antigos
+                    const textArea = document.createElement('textarea');
+                    textArea.value = phone;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    try {
+                        document.execCommand('copy');
+                        const originalHTML = copyButton.innerHTML;
+                        copyButton.innerHTML = '<i class="fas fa-check"></i><span>Copiado!</span>';
+                        copyButton.classList.add('copied');
+                        
+                        setTimeout(() => {
+                            copyButton.innerHTML = originalHTML;
+                            copyButton.classList.remove('copied');
+                        }, 2000);
+                    } catch (err) {
+                        console.error('Erro ao copiar:', err);
+                    }
+                    document.body.removeChild(textArea);
+                });
+            });
+        }
+    </script>
+
+    <!-- Copy Email Script -->
+    <script>
+        const copyEmailButton = document.getElementById('copyEmailButton');
+        const emailAddress = document.getElementById('emailAddress');
+        
+        if (copyEmailButton && emailAddress) {
+            copyEmailButton.addEventListener('click', () => {
+                const email = emailAddress.textContent;
+                
+                // Copia para a área de transferência
+                navigator.clipboard.writeText(email).then(() => {
+                    // Muda o visual do botão para confirmação
+                    const originalHTML = copyEmailButton.innerHTML;
+                    copyEmailButton.innerHTML = '<i class="fas fa-check"></i><span>Copiado!</span>';
+                    copyEmailButton.classList.add('copied');
+                    
+                    // Volta ao normal após 2 segundos
+                    setTimeout(() => {
+                        copyEmailButton.innerHTML = originalHTML;
+                        copyEmailButton.classList.remove('copied');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Erro ao copiar:', err);
+                    // Fallback para navegadores mais antigos
+                    const textArea = document.createElement('textarea');
+                    textArea.value = email;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    try {
+                        document.execCommand('copy');
+                        const originalHTML = copyEmailButton.innerHTML;
+                        copyEmailButton.innerHTML = '<i class="fas fa-check"></i><span>Copiado!</span>';
+                        copyEmailButton.classList.add('copied');
+                        
+                        setTimeout(() => {
+                            copyEmailButton.innerHTML = originalHTML;
+                            copyEmailButton.classList.remove('copied');
+                        }, 2000);
+                    } catch (err) {
+                        console.error('Erro ao copiar:', err);
+                    }
+                    document.body.removeChild(textArea);
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>
