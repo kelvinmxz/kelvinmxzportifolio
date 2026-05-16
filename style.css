@@ -1402,3 +1402,51 @@ section {
     background: var(--primary);
     color: white;
 }
+
+/* ===== MOBILE PERFORMANCE OPTIMIZATIONS ===== */
+/* Desabilitar animações pesadas em dispositivos mobile */
+.is-mobile .image-container video {
+    animation: none; /* Remove animação morph do vídeo */
+}
+
+.is-mobile #particles-js {
+    opacity: 0.5; /* Reduz opacidade das partículas */
+}
+
+.is-mobile .floating-badge {
+    animation: none; /* Remove animações dos badges */
+    transform: translateY(0) !important;
+}
+
+.is-mobile .hero-image {
+    will-change: auto; /* Remove otimização de GPU desnecessária */
+}
+
+/* Reduzir animações complexas em mobile */
+@media (max-width: 768px) {
+    * {
+        animation-duration: 0.3s !important; /* Animações mais rápidas */
+    }
+    
+    .skill-card,
+    .project-card {
+        transition: transform 0.2s ease; /* Transições mais rápidas */
+    }
+    
+    /* Desabilitar efeito parallax/morph no mobile */
+    .image-container video {
+        animation: none !important;
+        border-radius: 20px !important; /* Border radius fixo */
+    }
+}
+
+/* Reduzir motion para usuários que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

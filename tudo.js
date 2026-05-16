@@ -3,12 +3,20 @@
    Kelvin Costa Maues
    ======================================== */
 
+// ===== MOBILE DETECTION =====
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+
+// Adicionar classe ao body para CSS detectar mobile
+if (isMobile) {
+    document.body.classList.add('is-mobile');
+}
+
 // ===== PARTICLES.JS CONFIGURATION =====
 if (typeof particlesJS !== 'undefined') {
     particlesJS('particles-js', {
         particles: {
             number: {
-                value: 80,
+                value: isMobile ? 30 : 80, // Reduzir partículas no mobile
                 density: {
                     enable: true,
                     value_area: 800
@@ -249,50 +257,53 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===== CURSOR EFFECT =====
-const cursor = document.createElement('div');
-cursor.className = 'custom-cursor';
-document.body.appendChild(cursor);
+// Apenas em desktop
+if (!isMobile) {
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
 
-const cursorFollower = document.createElement('div');
-cursorFollower.className = 'cursor-follower';
-document.body.appendChild(cursorFollower);
+    const cursorFollower = document.createElement('div');
+    cursorFollower.className = 'cursor-follower';
+    document.body.appendChild(cursorFollower);
 
-let mouseX = 0, mouseY = 0;
-let followerX = 0, followerY = 0;
+    let mouseX = 0, mouseY = 0;
+    let followerX = 0, followerY = 0;
 
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top = mouseY + 'px';
-});
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
+    });
 
-function animateFollower() {
-    followerX += (mouseX - followerX) * 0.1;
-    followerY += (mouseY - followerY) * 0.1;
-    
-    cursorFollower.style.left = followerX + 'px';
-    cursorFollower.style.top = followerY + 'px';
-    
-    requestAnimationFrame(animateFollower);
+    function animateFollower() {
+        followerX += (mouseX - followerX) * 0.1;
+        followerY += (mouseY - followerY) * 0.1;
+        
+        cursorFollower.style.left = followerX + 'px';
+        cursorFollower.style.top = followerY + 'px';
+        
+        requestAnimationFrame(animateFollower);
+    }
+
+    animateFollower();
+
+    // Cursor interactions
+    const interactiveElements = document.querySelectorAll('a, button, .btn, .project-card, .skill-card');
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            cursorFollower.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        });
+        
+        el.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+        });
+    });
 }
-
-animateFollower();
-
-// Cursor interactions
-const interactiveElements = document.querySelectorAll('a, button, .btn, .project-card, .skill-card');
-interactiveElements.forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        cursorFollower.style.transform = 'translate(-50%, -50%) scale(1.5)';
-    });
-    
-    el.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
-    });
-});
 
 // ===== LOADING ANIMATION =====
 window.addEventListener('load', () => {
@@ -307,27 +318,30 @@ window.addEventListener('load', () => {
 });
 
 // ===== PROJECT CARDS TILT EFFECT =====
-const projectCards = document.querySelectorAll('.project-card');
+// Apenas em desktop
+if (!isMobile) {
+    const projectCards = document.querySelectorAll('.project-card');
 
-projectCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+    projectCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        });
         
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        const rotateX = (y - centerY) / 10;
-        const rotateY = (centerX - x) / 10;
-        
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        });
     });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-    });
-});
+}
 
 // ===== SCROLL PROGRESS INDICATOR =====
 const scrollProgress = document.createElement('div');
@@ -447,6 +461,33 @@ window.addEventListener('scroll', debouncedHighlightNav);
 console.log('%c 👨‍💻 Olá! Seja bem-vindo ao meu portfólio! ', 'background: #6366f1; color: white; font-size: 16px; padding: 10px; border-radius: 5px;');
 console.log('%c Desenvolvido por Kelvin Costa Maues ', 'background: #ec4899; color: white; font-size: 14px; padding: 8px; border-radius: 5px;');
 console.log('%c GitHub: https://github.com/kelvinmxz ', 'color: #6366f1; font-size: 12px; padding: 5px;');
+
+// ===== VIDEO OPTIMIZATION FOR MOBILE =====
+const heroVideo = document.getElementById('heroVideo');
+if (heroVideo) {
+    // Pausar vídeo quando não está visível (economiza bateria e recursos)
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                heroVideo.play().catch(e => console.log('Autoplay prevented:', e));
+            } else {
+                heroVideo.pause();
+            }
+        });
+    }, { threshold: 0.25 });
+    
+    videoObserver.observe(heroVideo);
+    
+    // Reduzir qualidade/taxa em mobile se necessário
+    if (isMobile) {
+        heroVideo.playbackRate = 1; // Normal speed
+        // Tentar iniciar o vídeo com interação do usuário se autoplay falhar
+        document.addEventListener('touchstart', function startVideo() {
+            heroVideo.play().catch(e => console.log('Video play failed:', e));
+            document.removeEventListener('touchstart', startVideo);
+        }, { once: true });
+    }
+}
 
 // ===== ADD DYNAMIC STYLES FOR CURSOR AND PROGRESS BAR =====
 const dynamicStyles = document.createElement('style');
