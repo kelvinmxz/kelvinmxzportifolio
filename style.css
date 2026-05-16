@@ -992,6 +992,8 @@ section {
     border: 1px solid var(--border-color);
     border-radius: 15px;
     backdrop-filter: blur(10px);
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .email-contact {
@@ -1001,6 +1003,8 @@ section {
     border: 1px solid var(--border-color);
     border-radius: 15px;
     backdrop-filter: blur(10px);
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .whatsapp-contact .contact-label {
@@ -1029,6 +1033,8 @@ section {
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .phone-number {
@@ -1042,6 +1048,9 @@ section {
     border-radius: 8px;
     flex: 1;
     min-width: 200px;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .copy-button {
@@ -1303,6 +1312,10 @@ section {
     .phone-number {
         text-align: center;
         min-width: 100%;
+        font-size: 1rem;
+        padding: 12px 10px;
+        letter-spacing: 0.5px;
+        word-break: break-all;
     }
     
     .copy-button {
@@ -1338,6 +1351,23 @@ section {
     
     .project-title {
         font-size: 1.2rem;
+    }
+    
+    .whatsapp-contact,
+    .email-contact {
+        padding: 15px 10px;
+    }
+    
+    .phone-number {
+        font-size: 0.85rem;
+        padding: 10px 8px;
+        letter-spacing: 0;
+        word-break: break-all;
+    }
+    
+    .copy-button {
+        font-size: 0.9rem;
+        padding: 10px 16px;
     }
 }
 
@@ -1431,12 +1461,6 @@ section {
     .skill-card,
     .project-card {
         transition: transform 0.2s ease; /* Transições mais rápidas */
-    }
-    
-    /* Desabilitar efeito parallax/morph no mobile */
-    .image-container video {
-        animation: none !important;
-        border-radius: 20px !important; /* Border radius fixo */
     }
 }
 
