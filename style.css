@@ -407,6 +407,21 @@ button {
     border: 3px solid var(--primary);
     box-shadow: var(--shadow-xl);
     animation: morph 8s ease-in-out infinite;
+    pointer-events: none; /* Desabilita interação */
+    object-fit: cover;
+}
+
+/* Ocultar controles nativos do vídeo */
+.image-container video::-webkit-media-controls {
+    display: none !important;
+}
+
+.image-container video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+.image-container video::-webkit-media-controls-panel {
+    display: none !important;
 }
 
 @keyframes morph {
@@ -1143,7 +1158,7 @@ section {
     border: none;
     color: white;
     font-size: 24px;
-    display: flex;
+    display: none; /* Ocultar botão */
     align-items: center;
     justify-content: center;
     cursor: pointer;
